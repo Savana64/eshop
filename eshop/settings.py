@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%!ed--^u^pmen_^bc%=^x+kk@$0njw1jx(ppq++)0tir$-9)t0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,7 +122,8 @@ USE_TZ = True
 
 # Statické soubory
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_DIRS = [BASE_DIR / 'static']  # Složka pro vývoj
+STATIC_ROOT = BASE_DIR / 'staticfiles'    # Složka pro nasazení
 
 # Média
 MEDIA_URL = '/media/'

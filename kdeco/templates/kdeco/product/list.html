@@ -4,10 +4,10 @@
     <title>Product List</title>
 </head>
 <body>
-    <h1>Product List</h1>
+    <h2>Product List</h2>
     <ul>
         {% for product in products %}
-            <li><a href="{% url 'shop:product_detail' product.id product.slug %}">{{ product.name }}</a></li>
+            <li><a href="{% url 'kdeco:product_detail' product.id product.slug %}">{{ product.name }}</a></li>
         {% endfor %}
     </ul>
 </body>
