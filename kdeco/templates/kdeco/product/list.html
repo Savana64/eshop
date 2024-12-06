@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Product List</title>
-</head>
-<body>
-    <h2>Product List</h2>
-    <ul>
-        {% for product in products %}
-            <li><a href="{% url 'kdeco:product_detail' product.id product.slug %}">{{ product.name }}</a></li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h2>Product List</h2>
+<ul>
+    {% for product in products %}
+        <li><a href="{% url 'kdeco:product_detail' product.id product.slug %}">{{ product.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

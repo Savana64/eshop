@@ -22,6 +22,10 @@ def cart_detail(request):
         'cart_items': cart_items
     })
 
+#def detail(request, product_id):
+    #product = get_object_or_404(Product, id=product_id)
+    #return render(request, 'kdeco/product/detail.html', {'product': product})
+
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
